@@ -1,0 +1,28 @@
+.keyframe-explorer {
+    position: relative;
+
+    .offset {
+        width: 30%;
+    }
+
+    .percentage {
+        width: 30%;
+    }
+
+    .milliseconds {
+        width: 40%;
+    }
+
+    tr.active {
+        background-color: #444;
+    }
+
+   .active-indicator {
+       width: 25px;
+    }
+
+    // hide the active indicator when not row is not active
+    tr:not(.active) .active-indicator .fa {
+        display: none;
+    }
+}

@@ -1,0 +1,25 @@
+.project-explorer {
+    position: relative;
+    
+    ul {
+        padding: 0.75rem 1rem;
+        list-style-type: none;
+    }
+
+    li {
+        padding: 0.15rem;
+    }
+
+    li.active {
+        background-color: #444;
+    }
+
+   .active-indicator {
+       width: 25px;
+    }
+
+    // hide the active indicator when not row is not active
+    li:not(.active) .active-indicator .fa {
+        display: none;
+    }
+}

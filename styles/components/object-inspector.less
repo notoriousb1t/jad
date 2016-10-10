@@ -1,0 +1,12 @@
+﻿@import '../base/mixins.less';
+
+.object-inspector {
+
+    [type="checkbox"] {
+        display: inline-block;
+    }
+
+    .fade-in {
+        .nth-offset(20, @property: animation-delay, @offset: 25ms);
+    }
+}

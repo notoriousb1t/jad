@@ -1,0 +1,32 @@
+<section class="project-explorer scrollable-panel">
+    <div class="jad-toolbar">
+        <span class="pull-right">
+            <button title="Remove animation">
+                <span class="glyphicon glyphicon-minus"></span>
+            </button>
+            <button title="Add animation">
+                <span class="glyphicon glyphicon-plus"></span>
+            </button>
+        </span>
+    </div>
+    <div class="jad-content text-center" ng-if="!$ctrl.project.animations.length">
+        (Please create an animation)
+    </div>
+    <div class="jad-content" ng-if="$ctrl.project.animations.length">
+        <ul>
+            <li>
+                Animations
+                <ul>
+                    <li class="animation" ng-repeat="animation in $ctrl.project.animations track by $index">
+                        <a href="" ng-click="$ctrl.inspect(animation, animation.timings)" ng-class="{ active: $ctrl.isActive(animation) }">{{animation.name}}</a>
+                        <ul>
+                            <li ng-repeat="keyframe in animation.keyframes" ng-class="{ active: $ctrl.isActive(keyframe) }" ng-click="$ctrl.inspect(animation, keyframe)">
+                                Keyframe {{$index}}
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>

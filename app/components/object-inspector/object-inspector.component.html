@@ -1,0 +1,89 @@
+﻿<section class="object-inspector scrollable-panel relative">
+    <div class="jad-toolbar" ng-if="$ctrl.target">
+        <label class="clickable">
+            <input type="checkbox" ng-model="$ctrl.showUnset" /> Show Unset 
+        </label>
+    </div>
+    <div class="jad-content text-center" ng-if="!$ctrl.target">
+        <!-- empty template here -->
+    </div>
+    <div class="jad-content" ng-if="$ctrl.target">
+        <table class="table table-condensed table-responsive property-grid">
+            <tbody>
+                <tr class="fade-in" ng-if="$ctrl.showUnset || $ctrl.target[prop.name] !== undefined" ng-repeat="prop in $ctrl.descriptor.properties track by prop.name">
+                    
+                    <td class="name-column">
+                        <label class="control-label" for="{{prop.name}}">{{prop.name}}</label>
+                    </td>
+                    <td class="value-column">
+                        <div ng-switch="prop.type">
+                            <div ng-switch-when="angle">
+                                <input type="text" name="{{prop.name}}" class="form-control input-sm" ng-model="$ctrl.target[prop.name]" ng-model-options="{ debounce: 250 }" />
+                            </div>
+                            <div ng-switch-when="basic-shape">
+                                <input type="text" name="{{prop.name}}" class="form-control input-sm" ng-model="$ctrl.target[prop.name]" ng-model-options="{ debounce: 250 }" />
+                            </div>
+                            <div ng-switch-when="blend-mode">
+                                <input type="text" name="{{prop.name}}" class="form-control input-sm" ng-model="$ctrl.target[prop.name]" ng-model-options="{ debounce: 250 }" />
+                            </div>
+                            <div ng-switch-when="color_value">
+                                <input kendo-color-picker class="form-control" k-options="$ctrl.colorValueOptions" name="{{prop.name}}" k-ng-model="$ctrl.target[prop.name]" />
+                            </div>
+                            <div ng-switch-when="customIdent">
+                                <input type="text" name="{{prop.name}}" class="form-control input-sm" ng-model="$ctrl.target[prop.name]" ng-model-options="{ debounce: 250 }" />
+                            </div>
+                            <div ng-switch-when="gradient">
+                                <input type="text" name="{{prop.name}}" class="form-control input-sm" ng-model="$ctrl.target[prop.name]" ng-model-options="{ debounce: 250 }" />
+                            </div>
+                            <div ng-switch-when="image">
+                                <input type="text" name="{{prop.name}}" class="form-control input-sm" ng-model="$ctrl.target[prop.name]" ng-model-options="{ debounce: 250 }" />
+                            </div>
+                            <div ng-switch-when="integer">
+                                <input type="number" name="{{prop.name}}" class="form-control input-sm" ng-model="$ctrl.target[prop.name]" ng-model-options="{ debounce: 250 }" />
+                            </div>
+                            <div ng-switch-when="length">
+                                <input type="text" name="{{prop.name}}" class="form-control input-sm" ng-model="$ctrl.target[prop.name]" ng-model-options="{ debounce: 250 }" />
+                            </div>
+                            <div ng-switch-when="number">
+                                <input type="number" name="{{prop.name}}" class="form-control input-sm" ng-model="$ctrl.target[prop.name]" ng-model-options="{ debounce: 250 }" />
+                            </div>
+                            <div ng-switch-when="percentage">
+                                <input type="text" name="{{prop.name}}" class="form-control input-sm" ng-model="$ctrl.target[prop.name]" ng-model-options="{ debounce: 250 }" />
+                            </div>
+                            <div ng-switch-when="position_value">
+                                <input type="text" name="{{prop.name}}" class="form-control input-sm" ng-model="$ctrl.target[prop.name]" ng-model-options="{ debounce: 250 }" />
+                            </div>
+                            <div ng-switch-when="ratio">
+                                <input type="text" name="{{prop.name}}" class="form-control input-sm" ng-model="$ctrl.target[prop.name]" ng-model-options="{ debounce: 250 }" />
+                            </div>
+                            <div ng-switch-when="resolution">
+                                <input type="text" name="{{prop.name}}" class="form-control input-sm" ng-model="$ctrl.target[prop.name]" ng-model-options="{ debounce: 250 }" />
+                            </div>
+                            <div ng-switch-when="shape">
+                                <input type="text" name="{{prop.name}}" class="form-control input-sm" ng-model="$ctrl.target[prop.name]" ng-model-options="{ debounce: 250 }" />
+                            </div>
+                            <div ng-switch-when="shape-box">
+                                <input type="text" name="{{prop.name}}" class="form-control input-sm" ng-model="$ctrl.target[prop.name]" ng-model-options="{ debounce: 250 }" />
+                            </div>
+                            <div ng-switch-when="string">
+                                <input type="text" name="{{prop.name}}" class="form-control input-sm" ng-model="$ctrl.target[prop.name]" ng-model-options="{ debounce: 250 }" />
+                            </div>
+                            <div ng-switch-when="time">
+                                <input type="text" name="{{prop.name}}" class="form-control input-sm" ng-model="$ctrl.target[prop.name]" ng-model-options="{ debounce: 250 }" />
+                            </div>
+                            <div ng-switch-when="timing-function">
+                                <input type="text" name="{{prop.name}}" class="form-control input-sm" ng-model="$ctrl.target[prop.name]" ng-model-options="{ debounce: 250 }" />
+                            </div>
+                            <div ng-switch-when="transform-function">
+                                <input type="text" name="{{prop.name}}" class="form-control input-sm" ng-model="$ctrl.target[prop.name]" ng-model-options="{ debounce: 250 }" />
+                            </div>
+                            <div ng-switch-default>
+                                <input type="text" class="form-control input-sm" ng-model="$ctrl.target[prop.name]" ng-model-options="{ debounce: 250 }" />
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

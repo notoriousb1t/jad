@@ -1,0 +1,7 @@
+﻿.nth-offset(@index, @property: transition-delay, @start: 0ms, @offset: 50ms) when (@index > 0) {
+    &:nth-child(@{index}) {
+        @{property}: @start+ (@offset * (@index - 1));
+    }
+
+    .nth-offset(@index - 1, @property, @start, @offset);
+}
