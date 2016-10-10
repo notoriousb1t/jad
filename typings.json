@@ -1,0 +1,7 @@
+{
+  "globalDependencies": {
+    "angular": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular.d.ts",
+    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts",
+    "kendo-ui": "github:DefinitelyTyped/DefinitelyTyped/kendo-ui/kendo-ui.d.ts"
+  }
+}

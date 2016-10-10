@@ -1,0 +1,164 @@
+<section class="transform-editor scrollable-panel">
+    <div class="jad-toolbar">
+        <span>
+            <button title="Add property" ng-if="$ctrl.keyframe">
+                <span class="fa fa-plus"></span>
+        </button>
+        </span>
+    </div>
+    <div class="jad-content text-center" ng-if="!$ctrl.keyframe">
+        (Please select a keyframe)
+    </div>
+    <div class="jad-content" ng-if="$ctrl.keyframe !== undefined">
+        <table class="property-grid" ng-if="$ctrl.keyframe">
+            <colgroup>
+                <col class="name-column" />
+                <col class="value-column" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td class="name-column">
+                        <label for="input_background-color" class="editor-name">background-color</label></td>
+                    <td class="value-column">
+                        <input kendo-color-picker id="input_background-color" name="background-color" type="text" ng-model="$ctrl.keyframe['background-color']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column">
+                        <label for="input_color" class="editor-name">color</label></td>
+                    <td class="value-column">
+                        <input kendo-color-picker id="input_color" name="color" type="text" ng-model="$ctrl.keyframe['color']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td><label for="input_opacity" class="editor-name">opacity</label></td>
+                    <td><input id="input_opacity" name="opacity" class="editor-property" type="text" ng-model="$ctrl.keyframe['opacity']"
+                        /></td>
+                </tr>
+
+
+                <tr>
+                    <td class="name-column"><label for="input_perspective" class="editor-name">perspective</label></td>
+                    <td class="value-column"><input id="input_perspective" name="perspective" class="editor-property k-input" type="text" ng-model="$ctrl.keyframe['perspective']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_perspective-origin" class="editor-name">perspective-origin</label></td>
+                    <td class="value-column"><input id="input_perspective-origin" name="perspective-origin" class="editor-property k-input" type="text"
+                            ng-model="$ctrl.keyframe['perspective-origin']" /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_rotate" class="editor-name">rotate</label></td>
+                    <td class="value-column"><input id="input_rotate" name="rotate" class="editor-property k-input" type="text" ng-model="$ctrl.keyframe['rotate']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_rotate3d" class="editor-name">rotate3d</label></td>
+                    <td class="value-column"><input id="input_rotate3d" name="rotate3d" class="editor-property k-input" type="text" ng-model="$ctrl.keyframe['rotate3d']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_rotateX" class="editor-name">rotateX</label></td>
+                    <td class="value-column"><input id="input_rotateX" name="rotateX" class="editor-property k-input" type="text" ng-model="$ctrl.keyframe['rotateX']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_rotateY" class="editor-name">rotateY</label></td>
+                    <td class="value-column"><input id="input_rotateY" name="rotateY" class="editor-property k-input" type="text" ng-model="$ctrl.keyframe['rotateY']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_rotateZ" class="editor-name">rotateZ</label></td>
+                    <td class="value-column"><input id="input_rotateZ" name="rotateZ" class="editor-property k-input" type="text" ng-model="$ctrl.keyframe['rotateZ']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_scale" class="editor-name">scale</label></td>
+                    <td class="value-column"><input id="input_scale" name="scale" class="editor-property k-input" type="number" ng-model="$ctrl.keyframe['scale']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_scale3d" class="editor-name">scale3d</label></td>
+                    <td class="value-column"><input id="input_scale3d" name="scale3d" class="editor-property k-input" type="number" ng-model="$ctrl.keyframe['scale3d']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_scaleX" class="editor-name">scaleX</label></td>
+                    <td class="value-column"><input id="input_scaleX" name="scaleX" class="editor-property k-input" type="number" ng-model="$ctrl.keyframe['scaleX']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_scaleY" class="editor-name">scaleY</label></td>
+                    <td class="value-column"><input id="input_scaleY" name="scaleY" class="editor-property k-input" type="number" ng-model="$ctrl.keyframe['scaleY']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_scaleZ" class="editor-name">scaleZ</label></td>
+                    <td class="value-column"><input id="input_scaleZ" name="scaleZ" class="editor-property k-input" type="number" ng-model="$ctrl.keyframe['scaleZ']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_skew" class="editor-name">skew</label></td>
+                    <td class="value-column"><input id="input_skew" name="skew" class="editor-property k-input" type="text" ng-model="$ctrl.keyframe['skew']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_skewX" class="editor-name">skewX</label></td>
+                    <td class="value-column"><input id="input_skewX" name="skewX" class="editor-property k-input" type="text" ng-model="$ctrl.keyframe['skewX']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_skewY" class="editor-name">skewY</label></td>
+                    <td class="value-column"><input id="input_skewY" name="skewY" class="editor-property k-input" type="text" ng-model="$ctrl.keyframe['skewY']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_transform" class="editor-name">transform</label></td>
+                    <td class="value-column"><input id="input_transform" name="transform" class="editor-property k-input" type="text" ng-model="$ctrl.keyframe['transform']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_transform-origin" class="editor-name">transform-origin</label></td>
+                    <td class="value-column"><input id="input_transform-origin" name="transform-origin" class="editor-property k-input" type="text"
+                            ng-model="$ctrl.keyframe['transform-origin']" /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_translate" class="editor-name">translate</label></td>
+                    <td class="value-column"><input id="input_translate" name="translate" class="editor-property k-input" type="text" ng-model="$ctrl.keyframe['translate']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_translate3d" class="editor-name">translate3d</label></td>
+                    <td class="value-column"><input id="input_translate3d" name="translate3d" class="editor-property k-input" type="text" ng-model="$ctrl.keyframe['translate3d']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_translateX" class="editor-name">translateX</label></td>
+                    <td class="value-column"><input id="input_translateX" name="translateX" class="editor-property k-input" type="text" ng-model="$ctrl.keyframe['translateX']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_translateY" class="editor-name">translateY</label></td>
+                    <td class="value-column"><input id="input_translateY" name="translateY" class="editor-property k-input" type="text" ng-model="$ctrl.keyframe['translateY']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_translateZ" class="editor-name">translateZ</label></td>
+                    <td class="value-column"><input id="input_translateZ" name="translateZ" class="editor-property k-input" type="text" ng-model="$ctrl.keyframe['translateZ']"
+                        /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_fill" class="editor-name">fill</label></td>
+                    <td class="value-column">
+                        <input kendo-color-picker id="input_fill" name="fill" type="text" ng-model="$ctrl.keyframe.fill" /></td>
+                </tr>
+                <tr>
+                    <td class="name-column"><label for="input_stroke" class="editor-name">stroke</label></td>
+                    <td class="value-column">
+                        <input kendo-color-picker id="input_stroke" name="stroke" type="text" ng-model="$ctrl.keyframe.stroke">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

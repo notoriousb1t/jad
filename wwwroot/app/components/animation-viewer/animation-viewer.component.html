@@ -1,0 +1,23 @@
+<div class="animation-viewer">
+    <div class="top-player-controls">
+        <select class="pull-right" kendo-drop-down-list k-options="$ctrl.shapeOptions" ng-model="$ctrl.shape"></select>
+    </div>
+    <div class="bottom-player-controls">
+        <span class="pull-left">
+            <button class="k-button" ng-click="$ctrl.togglePlay()">
+            <span ng-class="$ctrl.playButtonClass"></span>
+        </button>
+        <button class="k-button" ng-click="$ctrl.stopAnimation()">
+            <span class="fa fa-square"></span>
+        </button>
+        </span>
+        <input type="range" class="timeline" min="0" max="{{$ctrl.duration}}" step="1" ng-model="$ctrl.currentTime" ng-change="$ctrl.setAnimationTime()"
+        />
+        <span class="pull-right">
+        <input type="text" class="k-textbox text-right" ng-model="$ctrl.currentTime" pattern="[0-9\.]*" ng-change="$ctrl.setAnimationTime()" />            
+        </span>
+    </div>
+    <div class="player text-center">
+        <!-- player is inserted here -->
+    </div>
+</div>

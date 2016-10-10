@@ -1,0 +1,389 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+html,
+body {
+  font-size: 9.5pt;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.lm_content {
+  overflow-y: auto;
+}
+.lm_item_container {
+  color: #fefefe;
+}
+[ng-click] {
+  cursor: pointer;
+}
+[ng-click]:hover {
+  background-color: black;
+}
+.property-grid {
+  width: 100%;
+}
+.property-grid .editor-name {
+  font-size: 9pt;
+  padding: 0.5rem 0.2rem;
+  margin: 0.5rem;
+  text-transform: lowercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.property-grid .editor-property {
+  font-size: 10.5pt;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #222222;
+  border: none;
+  border-bottom: solid thin black;
+  color: #ffffff;
+}
+.property-grid .name-column {
+  width: 100px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.property-grid .value-column {
+  margin-right: 0.1em;
+  display: block;
+  text-align: right;
+}
+.property-grid .k-colorpicker {
+  font-size: 9.5;
+}
+.jad-toolbar {
+  position: absolute;
+  bottom: 0;
+  height: 1.8em;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to bottom, #333333, #222222);
+  z-index: 3;
+}
+.jad-toolbar button {
+  background-color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  height: 1.8em;
+}
+.jad-content {
+  height: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+  padding-bottom: 1.8em;
+  z-index: 2;
+}
+.scrollable-panel {
+  box-sizing: border-box;
+  height: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.animation-viewer {
+  position: relative;
+  height: 100%;
+}
+.animation-viewer .top-player-controls {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.25em;
+  background-color: transparent;
+  padding-top: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  text-align: center;
+}
+.animation-viewer .bottom-player-controls {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3.25em;
+  background-color: transparent;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  text-align: center;
+}
+.animation-viewer .timeline {
+  width: 45%;
+  padding: 1em;
+}
+.animation-viewer .player {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+.animation-viewer .animation-rectangle {
+  width: 150px;
+  height: 150px;
+  background-color: aqua;
+  border-radius: 1rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -75px;
+  top: 25%;
+}
+.animation-viewer .animation-text {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 4em;
+  margin-top: 25%;
+  width: 400px;
+}
+.animation-viewer .animation-button {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 25%;
+  display: block;
+}
+.keyframe-explorer {
+  position: relative;
+}
+.keyframe-explorer .offset {
+  width: 30%;
+}
+.keyframe-explorer .percentage {
+  width: 30%;
+}
+.keyframe-explorer .milliseconds {
+  width: 40%;
+}
+.keyframe-explorer table {
+  width: 100%;
+  table-layout: fixed;
+  text-align: center;
+}
+.keyframe-explorer tr.active {
+  background-color: #444;
+}
+.keyframe-explorer .active-indicator {
+  width: 25px;
+}
+.keyframe-explorer tr:not(.active) .active-indicator .fa {
+  display: none;
+}
+.project-explorer {
+  position: relative;
+}
+.project-explorer ul {
+  padding: 0.75rem 1rem;
+  list-style-type: none;
+}
+.project-explorer li {
+  padding: 0.15rem;
+}
+.project-explorer li.active {
+  background-color: #444;
+}
+.project-explorer .active-indicator {
+  width: 25px;
+}
+.project-explorer li:not(.active) .active-indicator .fa {
+  display: none;
+}
+.transform-editor {
+  position: relative;
+}

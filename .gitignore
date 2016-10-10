@@ -1,0 +1,7 @@
+.idea
+.vs
+node_modules
+typings
+wwwroot/app/**/*.js
+wwwroot/app/**/*.map
+wwwroot/lib/**/*

@@ -1,0 +1,42 @@
+<section class="animation-editor scrollable-panel">
+    <table class="property-grid" ng-if="$ctrl.animation">
+        <colgroup>
+            <col class="name-column" />
+            <col class="value-column" />
+        </colgroup>
+        <tbody>
+            <tr>
+                <td class="name-column">
+                    <label for="input_duration" class="editor-name">duration</label>
+                </td>
+                <td class="value-column">
+                    <input id="input_duration" name="perspective" class="editor-property" type="number" ng-model="$ctrl.animation.timings.duration" ng-model-options="{ debounce: 250 }">
+                </td>
+            </tr>
+            <tr>
+                <td class="name-column">
+                    <label for="input_easing" class="editor-name">easing</label>
+                </td>
+                <td class="value-column">
+                    <input id="input_easing" name="perspective" class="editor-property" type="text" ng-model="$ctrl.animation.timings.easing" ng-model-options="{ debounce: 250 }">
+                </td>
+            </tr>
+            <tr>
+                <td class="name-column">
+                    <label for="input_fill" class="editor-name">fill</label>
+                </td>
+                <td class="value-column">
+                    <input id="input_fill" name="perspective" class="editor-property" type="text" ng-model="$ctrl.animation.timings.fill" ng-model-options="{ debounce: 250 }">
+                </td>
+            </tr>
+            <tr>
+                <td class="name-column">
+                    <label for="input_iterations" class="editor-name">iterations</label>
+                </td>
+                <td class="value-column">
+                    <input id="input_iterations" name="perspective" class="editor-property" type="number" ng-model="$ctrl.animation.timings.iterations" ng-model-options="{ debounce: 250 }">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>

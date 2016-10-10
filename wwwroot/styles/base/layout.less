@@ -1,0 +1,113 @@
+html, body {
+  font-size: 9.5pt;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.lm_content {
+  overflow-y: auto;
+}
+
+.lm_item_container {
+    color: #fefefe;
+}
+
+[ng-click] {
+    cursor: pointer;
+    
+    &:hover {
+        background-color: black;
+    }
+}
+
+.property-grid {
+    width: 100%;
+
+    .editor-name {
+      font-size: 9pt;
+      padding: 0.5rem 0.2rem;
+      margin: 0.5rem;
+      text-transform: lowercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+    }
+    .editor-property {
+      font-size: 10.5pt;
+      width: 100%;
+      padding: 0.5rem;
+      background-color: #222222;
+      border: none;
+      border-bottom: solid thin black;
+      color: #ffffff;
+    }
+    .name-column {
+      width: 100px;
+      text-align: left;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .value-column {
+      margin-right: 0.1em;
+      display: block;
+      text-align: right;
+    }
+
+    .k-colorpicker {
+      font-size: 9.5;
+    }
+}
+
+@toolbar-height: 1.8em;
+
+.jad-toolbar {
+  position: absolute;
+  bottom: 0;
+  height: @toolbar-height;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to bottom, #333, #222);
+  z-index: 3;
+
+  button {
+    background-color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    height: @toolbar-height;
+  }
+}
+
+.jad-content {
+  height: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+  padding-bottom: @toolbar-height;
+  z-index: 2;
+}
+
+.scrollable-panel {
+    box-sizing: border-box;
+    height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

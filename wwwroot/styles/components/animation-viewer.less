@@ -1,0 +1,76 @@
+.animation-viewer {
+    position: relative;
+    height: 100%;
+
+    .top-player-controls {
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        height: 3.25em;
+        background-color: transparent;
+        padding-top: 0.75rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        text-align: center;
+    }
+
+    .bottom-player-controls {
+        position: absolute;
+        z-index: 5;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        height: 3.25em;
+        background-color: transparent;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        text-align: center;
+    }
+
+    .timeline {
+        width: 45%;
+        padding: 1em;
+    }
+
+    .player {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+    }
+
+    .animation-rectangle {
+        @rectangle-size: 150px;
+        width: @rectangle-size;
+        height: @rectangle-size;
+        background-color: aqua;
+        border-radius: 1rem;
+        position: absolute;
+        left: 50%;
+        margin-left: -(@rectangle-size/2);
+        top: 25%;
+    }
+
+    .animation-text {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 4em;
+        margin-top: 25%;
+        width: 400px;
+    }
+
+    .animation-button {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-top: 25%;
+        display: block;
+    }
+}

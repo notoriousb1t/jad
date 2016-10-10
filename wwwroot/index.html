@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head prefix="og: http://ogp.me/ns#">
+    <base href="/">
+    <meta http-equiv='X-UA-Compatible' content='IE=Edge'>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <meta http-equiv='Content-Language' content='en-us' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+    <title>Just Animate Designer</title>
+
+    <!-- import lib styles -->
+    <link type="text/css" rel="stylesheet" href="./styles/kendo/kendo.common-material.core.css" />
+    <link type="text/css" rel="stylesheet" href="./styles/kendo/kendo.materialblack.css" />
+    <link type="text/css" rel="stylesheet" href="https://golden-layout.com/files/latest/css/goldenlayout-base.css" />
+    <link type="text/css" rel="stylesheet" href="https://golden-layout.com/files/latest/css/goldenlayout-dark-theme.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-hotkeys/1.7.0/hotkeys.min.css" />
+    <link rel="stylesheet" href="./styles/site.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="./lib/es6-shim/es6-shim.min.js"></script>
+    <script src="./lib/systemjs/dist/system-polyfills.js"></script>
+    <script src="./lib/systemjs/dist/system.src.js"></script>
+    <script src="./lib/jquery/dist/jquery.min.js"></script>
+    <script src="./lib/angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-hotkeys/1.7.0/hotkeys.min.js"></script>
+    <script src="./lib/golden-layout/dist/goldenlayout.js"></script>
+    <script src="http://kendo.cdn.telerik.com/2016.2.607/js/kendo.ui.core.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.2.1/web-animations-next.min.js"></script>
+    <script src="./lib/just-animate/browser/just-animate-core.js"></script>
+    <script src="./lib/just-animate/browser/just-animate-animations.js"></script>
+    <script src="./lib/redux/dist/redux.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js"></script>
+
+    <script type="text/javascript">
+        System.config({
+            packages: {        
+                app: {
+                    format: 'cjs',
+                    defaultExtension: 'js'
+                }
+            }
+        });
+    </script>
+
+    <!-- import lib javascript -->
+
+    <script>
+        System.import('app/main').then(null, console.error.bind(console));
+    </script>
+</head>
+
+<body class="k-content">
+
+</body>
+
+</html>

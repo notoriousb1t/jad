@@ -1,0 +1,38 @@
+<section class="project-explorer scrollable-panel">
+    <div class="jad-toolbar">
+        <span>
+            <button title="Open project">
+                <span class="fa fa-folder-open"></span>
+            </button>
+            <button title="Save project">
+                <span class="fa fa-floppy-o"></span>
+            </button>
+        </span>
+        <span class="pull-right">
+            <button title="Remove animation">
+                <span class="fa fa-minus"></span>
+            </button>
+            <button title="Add animation">
+                <span class="fa fa-plus"></span>
+            </button>
+        </span>
+    </div>
+    <div class="jad-content text-center" ng-if="!$ctrl.project.animations.length">
+        (Please create an animation)
+    </div>
+    <div class="jad-content" ng-if="$ctrl.project.animations.length">
+        <ul>
+            <li>
+                Animations
+                <ul>
+                    <li class="animation"  ng-class="{ active: $ctrl.isActive(animation) }" ng-repeat="animation in $ctrl.project.animations track by $index" ng-click="$ctrl.setActiveAnimation(animation)">
+                        <span class="active-indicator">
+                            <span class="fa fa-arrow-right"></span>
+                        </span>
+                        <span>{{animation.name}}</span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>

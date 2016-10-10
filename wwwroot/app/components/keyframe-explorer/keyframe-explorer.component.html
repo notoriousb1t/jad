@@ -1,0 +1,40 @@
+<section class="keyframe-explorer scrollable-panel" >
+    <div class="jad-toolbar">
+        <span>
+            <button title="Add keyframe" ng-if="$ctrl.keyframes !== undefined">
+                <span class="fa fa-plus"></span>
+            </button>
+        </span>
+    </div>
+    <div class="jad-content text-center" ng-if="$ctrl.keyframes === undefined">
+        (Please select an animation)
+    </div>
+    <div class="jad-content" ng-if="$ctrl.keyframes !== undefined">
+        <table class="text-align: left;">
+            <colgroup>
+                <col class="active-indicator" />
+                <col class="offset" />
+                <col class="percentage" />
+                <col class="milliseconds" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th class="active-indicator"> </th>
+                    <th class="offset">offset</th>
+                    <th class="percentage">%</th>
+                    <th>time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="keyframe in $ctrl.keyframes track by $index" ng-class="{ active: $ctrl.isActive(keyframe) }" ng-click="$ctrl.setActiveKeyframe(keyframe)">
+                    <td class="active-indicator">
+                        <span class="fa fa-arrow-right"></span>
+                    </td>
+                    <td class="offset">{{$ctrl.getOffset(keyframe)}}</td>
+                    <td class="percentage">{{$ctrl.getPercentage(keyframe)}}</td>
+                    <td class="milliseconds">{{$ctrl.getMilliseconds(keyframe)}} ms</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
